@@ -1,0 +1,4 @@
+repository "Unity Goblins Spilprojekt/Unity Goblins Spilprojekt@5772927429357@cloud"
+  path "/"
+    br "/main"
+    co "/main"
