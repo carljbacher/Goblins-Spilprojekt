@@ -16,7 +16,7 @@ public class SpillerBevægelse : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            body.linearVelocity = new Vector2(body.velocity.x, Speed);
+            body.linearVelocity = new Vector2(body.linearVelocity.x, Speed);
         }
     }
     
