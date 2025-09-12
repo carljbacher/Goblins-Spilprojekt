@@ -9,6 +9,7 @@ public class SpillerBevægelse : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
     private float wallJumpCooldown;
+    private float horizontalInput;
 
     private void Awake()
     {
@@ -19,36 +20,41 @@ public class SpillerBevægelse : MonoBehaviour
     private void Update()
     {
 
+        horizontalInput = Input.GetAxis("Horizontal");
 
+        // if (horizontalInput > 0.01f)
+        //    transform.localScale = Vector3.one;
+        //else if (horizontalInput < -0.01f)
+        //    transform.localScale = new Vector3(-1, 1, 1);
 
 
         // Wall jump logik
-        if (wallJumpCooldown > 0.2f)
-        {
-
-
-            body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * Speed, body.linearVelocity.y);
-
-            if (onWall() && !isGrounded())
+            if (wallJumpCooldown > 0.2f)
             {
-                body.gravityScale = 0;
-                body.linearVelocity = Vector2.zero;
-            }
-            else // Skal ændres hvis tyngdekraften bliver ændret
-            {
-                body.gravityScale = 3;
-            }
 
-            if (Input.GetKey(KeyCode.Space))
-            {
-                Jump();
-            }
 
-        }
-        else
-        {
-            wallJumpCooldown += Time.deltaTime;
-        }
+                body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * Speed, body.linearVelocity.y);
+
+                if (onWall() && !isGrounded())
+                {
+                    body.gravityScale = 0;
+                    body.linearVelocity = Vector2.zero;
+                }
+                else // Skal ændres hvis tyngdekraften bliver ændret
+                {
+                    body.gravityScale = 4;
+                }
+
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    Jump();
+                }
+
+            }
+            else
+            {
+                wallJumpCooldown += Time.deltaTime;
+            }
     }
 
     private void Jump()
@@ -60,8 +66,17 @@ public class SpillerBevægelse : MonoBehaviour
 
         else if (onWall() && !isGrounded())
         {
+            if (horizontalInput == 0)
+            {
+                body.linearVelocity = new Vector2(Mathf.Sign(transform.localScale.x) * 10, 0);
+                transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else
+            {
+                body.linearVelocity = new Vector2(Mathf.Sign(transform.localScale.x) * 3, 10);
+            }
             wallJumpCooldown = 0;
-            body.linearVelocity = new Vector2(Mathf.Sign(transform.localScale.x) * 3, 10);
+            
             
         }
     }
