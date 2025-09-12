@@ -351,9 +351,9 @@ GameObject:
   - component: {fileID: 733672815}
   - component: {fileID: 733672814}
   - component: {fileID: 733672813}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gulv
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,7 +655,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0fec82b9ebc4d146a9311b9d1ab53b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Speed: 3.1
+  Speed: 8
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
