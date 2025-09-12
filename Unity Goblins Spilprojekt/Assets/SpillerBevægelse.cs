@@ -19,7 +19,6 @@ public class SpillerBevægelse : MonoBehaviour
 
     private void Update()
     {
-
         horizontalInput = Input.GetAxis("Horizontal");
 
         // if (horizontalInput > 0.01f)
@@ -27,34 +26,14 @@ public class SpillerBevægelse : MonoBehaviour
         //else if (horizontalInput < -0.01f)
         //    transform.localScale = new Vector3(-1, 1, 1);
 
+        //Jump funktion
+        if (Input.GetKeyDown(KeyCode.Space))
+            Jump();
 
-        // Wall jump logik
-            if (wallJumpCooldown > 0.2f)
-            {
+        if (horizontalInput.GetKeyUp(KeyCode.Space) && body.linearVelocity.y > 0)
+            body.linearVelocity = new Vector2()
 
 
-                body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * Speed, body.linearVelocity.y);
-
-                if (onWall() && !isGrounded())
-                {
-                    body.gravityScale = 0;
-                    body.linearVelocity = Vector2.zero;
-                }
-                else // Skal ændres hvis tyngdekraften bliver ændret
-                {
-                    body.gravityScale = 4;
-                }
-
-                if (Input.GetKey(KeyCode.Space))
-                {
-                    Jump();
-                }
-
-            }
-            else
-            {
-                wallJumpCooldown += Time.deltaTime;
-            }
     }
 
     private void Jump()
