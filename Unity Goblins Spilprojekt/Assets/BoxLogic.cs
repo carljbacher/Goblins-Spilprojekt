@@ -12,7 +12,7 @@ public class BoxLogic : MonoBehaviour
 
     void Start()
     {
-
+        Timer1 = StartOffset;
     }
 
 
@@ -21,10 +21,9 @@ public class BoxLogic : MonoBehaviour
         Timer1 = Timer1 + Time.deltaTime;
         Debug.Log(Timer1);
 
-        if (Timer1 > 2)
+        if (Timer1 > ChangeTime)
         {
             Timer1 = 0;
-            Debug.Log("test1");
             if (active1)
             {
                 targetObject.SetActive(true);
@@ -35,7 +34,6 @@ public class BoxLogic : MonoBehaviour
                 targetObject.SetActive(false);
                 active1 = true;
             }
-
         }
         
 

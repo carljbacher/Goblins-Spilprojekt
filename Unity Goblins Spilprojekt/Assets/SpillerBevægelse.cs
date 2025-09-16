@@ -13,6 +13,7 @@ public class SpillerBevægelse : MonoBehaviour
     private float coyoteCounter;
     [SerializeField] private float wallJumpX;
     [SerializeField] private float wallJumpY;
+    private bool wallJumpCounter;
 
     private void Awake()
     {
@@ -29,9 +30,12 @@ public class SpillerBevægelse : MonoBehaviour
         else if (horizontalInput < -0.01f)
             transform.localScale = new Vector3(-0.15f, 0.25f, 1);
 
+        if (isGrounded())
+            wallJumpCounter = true;
+
         //Jump funktion
-        if (Input.GetKeyDown(KeyCode.Space))
-            Jump();
+            if (Input.GetKeyDown(KeyCode.Space))
+                Jump();
 
         if (Input.GetKeyUp(KeyCode.Space) && body.linearVelocity.y > 0)
             body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y / 2);
@@ -60,7 +64,7 @@ public class SpillerBevægelse : MonoBehaviour
     {
         if (coyoteCounter < 0 && !onWall()) return;
 
-        if (onWall())
+        if (onWall() && wallJumpCounter)
             wallJump();
         else
         {
@@ -79,7 +83,7 @@ public class SpillerBevægelse : MonoBehaviour
     private void wallJump()
     {
         body.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
-        Debug.Log("TEST_wallJump");
+        wallJumpCounter = false;
     }
 
     private bool isGrounded()
