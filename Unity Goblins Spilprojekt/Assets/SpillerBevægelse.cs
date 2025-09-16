@@ -14,7 +14,6 @@ public class SpillerBevægelse : MonoBehaviour
     [SerializeField] private float wallJumpX;
     [SerializeField] private float wallJumpY;
 
-
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
