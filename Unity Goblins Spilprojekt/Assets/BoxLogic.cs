@@ -1,0 +1,43 @@
+using System.ComponentModel.Design;
+using UnityEditor.Rendering;
+using UnityEngine;
+
+public class BoxLogic : MonoBehaviour
+{
+    [SerializeField] float ChangeTime;
+    [SerializeField] float StartOffset;
+    private float Timer1;
+    [SerializeField] private GameObject targetObject;
+    private bool active1;
+
+    void Start()
+    {
+
+    }
+
+
+    void Update()
+    {
+        Timer1 = Timer1 + Time.deltaTime;
+        Debug.Log(Timer1);
+
+        if (Timer1 > 2)
+        {
+            Timer1 = 0;
+            Debug.Log("test1");
+            if (active1)
+            {
+                targetObject.SetActive(true);
+                active1 = false;
+            }
+            else
+            {
+                targetObject.SetActive(false);
+                active1 = true;
+            }
+
+        }
+        
+
+    }
+}
