@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: bdeb43341f56fcc4296685cbee8698be
+guid: ce4bb4904960eb640944376d4435703b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2603969119925670389
-    second: blue 0,25 _0
+      213: -4144691546440090165
+    second: 0,25 node blue fake_0
   - first:
-      213: 4894864952825984179
-    second: blue 0,25 _1
+      213: -7907779554134163700
+    second: 0,25 node blue fake_1
   - first:
-      213: -5397099194086103498
-    second: blue 0,25 _2
+      213: 3609038276081417077
+    second: 0,25 node blue fake_2
   - first:
-      213: 4562965256588257854
-    second: blue 0,25 _3
+      213: -8579127541137407006
+    second: 0,25 node blue fake_3
   - first:
-      213: 5724698074931050034
-    second: blue 0,25 _4
+      213: 1472671799754017326
+    second: 0,25 node blue fake_4
   - first:
-      213: -5732890259475650539
-    second: blue 0,25 _5
+      213: 7721196933002976965
+    second: 0,25 node blue fake_5
   - first:
-      213: 4459383005402196227
-    second: blue 0,25 _6
+      213: -8479507284745306623
+    second: 0,25 node blue fake_6
   - first:
-      213: 4551406248798564045
-    second: blue 0,25 _7
+      213: -8745572262561080978
+    second: 0,25 node blue fake_7
   - first:
-      213: 8806321993029273286
-    second: blue 0,25 _8
+      213: 3473882870599045035
+    second: 0,25 node blue fake_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -124,7 +124,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blue 0,25 _0
+      name: 0,25 node blue fake_0
       rect:
         serializedVersion: 2
         x: 0
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0e6eb0c1e7dcdbd0800000000000000
-      internalID: -2603969119925670389
+      spriteID: bcdbfde7ff81b76c0800000000000000
+      internalID: -4144691546440090165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue 0,25 _1
+      name: 0,25 node blue fake_1
       rect:
         serializedVersion: 2
         x: 111
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b4b3b09dbd0ee340800000000000000
-      internalID: 4894864952825984179
+      spriteID: c0f7cb9846ce14290800000000000000
+      internalID: -7907779554134163700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue 0,25 _2
+      name: 0,25 node blue fake_2
       rect:
         serializedVersion: 2
         x: 335
@@ -183,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63663f6c0e6a915b0800000000000000
-      internalID: -5397099194086103498
+      spriteID: 57bfe9ac031e51230800000000000000
+      internalID: 3609038276081417077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue 0,25 _3
+      name: 0,25 node blue fake_3
       rect:
         serializedVersion: 2
         x: 419
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3a6469a9b8e25f30800000000000000
-      internalID: 4562965256588257854
+      spriteID: 2e30cbb94f0d0f880800000000000000
+      internalID: -8579127541137407006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue 0,25 _4
+      name: 0,25 node blue fake_4
       rect:
         serializedVersion: 2
         x: 0
@@ -227,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 236b0a28196327f40800000000000000
-      internalID: 5724698074931050034
+      spriteID: e2ac217033bff6410800000000000000
+      internalID: 1472671799754017326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue 0,25 _5
+      name: 0,25 node blue fake_5
       rect:
         serializedVersion: 2
         x: 447
@@ -249,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51828a3eeaea070b0800000000000000
-      internalID: -5732890259475650539
+      spriteID: 5ce5a70b3b3372b60800000000000000
+      internalID: 7721196933002976965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue 0,25 _6
+      name: 0,25 node blue fake_6
       rect:
         serializedVersion: 2
         x: 0
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30969627739e2ed30800000000000000
-      internalID: 4459383005402196227
+      spriteID: 10e3b660d0db25a80800000000000000
+      internalID: -8479507284745306623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue 0,25 _7
+      name: 0,25 node blue fake_7
       rect:
         serializedVersion: 2
         x: 335
@@ -293,14 +293,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dcea1207ed7d92f30800000000000000
-      internalID: 4551406248798564045
+      spriteID: e69998cfc5c71a680800000000000000
+      internalID: -8745572262561080978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue 0,25 _8
+      name: 0,25 node blue fake_8
       rect:
         serializedVersion: 2
         x: 419
@@ -315,8 +315,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c6483cd137563a70800000000000000
-      internalID: 8806321993029273286
+      spriteID: bafce5db016b53030800000000000000
+      internalID: 3473882870599045035
       vertices: []
       indices: 
       edges: []
@@ -335,15 +335,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blue 0,25 _0: -2603969119925670389
-      blue 0,25 _1: 4894864952825984179
-      blue 0,25 _2: -5397099194086103498
-      blue 0,25 _3: 4562965256588257854
-      blue 0,25 _4: 5724698074931050034
-      blue 0,25 _5: -5732890259475650539
-      blue 0,25 _6: 4459383005402196227
-      blue 0,25 _7: 4551406248798564045
-      blue 0,25 _8: 8806321993029273286
+      0,25 node blue fake_0: -4144691546440090165
+      0,25 node blue fake_1: -7907779554134163700
+      0,25 node blue fake_2: 3609038276081417077
+      0,25 node blue fake_3: -8579127541137407006
+      0,25 node blue fake_4: 1472671799754017326
+      0,25 node blue fake_5: 7721196933002976965
+      0,25 node blue fake_6: -8479507284745306623
+      0,25 node blue fake_7: -8745572262561080978
+      0,25 node blue fake_8: 3473882870599045035
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
