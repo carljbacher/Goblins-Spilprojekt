@@ -2,7 +2,7 @@ using System.ComponentModel.Design;
 using UnityEditor.Rendering;
 using UnityEngine;
 
-public class TEST: MonoBehaviour
+public class BoxLogic: MonoBehaviour
 {
     [SerializeField] float ChangeTime;
     [SerializeField] float StartOffset;
