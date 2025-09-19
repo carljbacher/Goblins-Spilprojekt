@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3d921a1d2307f054ab80b12ec644b9f2
+guid: 60fb6268340a88c47b6ba4096bd780bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7621639273912704352
-    second: floor 3top_0
+      213: 1787639849061637276
+    second: tree stump 3 long_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: floor 3top_0
+      name: tree stump 3 long_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06d9bb7d98085c960800000000000000
-      internalID: 7621639273912704352
+      spriteID: c9cd6ada8f8fec810800000000000000
+      internalID: 1787639849061637276
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      floor 3top_0: 7621639273912704352
+      tree stump 3 long_0: 1787639849061637276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
