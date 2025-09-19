@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: cceea325253bf8d49bea4ba9e5c92d73
-09911088f6723cf69e86823947bacbacb0f64c41
+guid: 83828d4a1cce71c40a247ace28c050db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8213839052596294972
-    second: top_3_long_ground_0
+      213: 4023397156416013251
+    second: Walk Cycle Frame 5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: top_3_long_ground_0
+      name: Walk Cycle Frame 5_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 756
-        height: 252
+        x: 391
+        y: 223
+        width: 450
+        height: 870
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4ca44c386e4920e80800000000000000
-      internalID: -8213839052596294972
+      spriteID: 3c34e7a956af5d730800000000000000
+      internalID: 4023397156416013251
       vertices: []
       indices: 
       edges: []
@@ -136,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      top_3_long_ground_0: -8213839052596294972
+      Walk Cycle Frame 5_0: 4023397156416013251
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
