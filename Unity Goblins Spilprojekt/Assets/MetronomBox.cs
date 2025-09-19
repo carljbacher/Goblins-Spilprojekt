@@ -2,18 +2,19 @@ using System.ComponentModel.Design;
 using UnityEditor.Rendering;
 using UnityEngine;
 
-public class TEST: MonoBehaviour
+public class MetronomBoxLogic : MonoBehaviour
 {
     [SerializeField] float ChangeTime;
     [SerializeField] float StartOffset;
     private float Timer1;
     [SerializeField] private GameObject targetObject;
     private bool active1;
-
+    public AudioSource audioSource;
 
     void Start()
     {
         Timer1 = StartOffset;
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -24,6 +25,7 @@ public class TEST: MonoBehaviour
         if (Timer1 > ChangeTime)
         {
             Timer1 = 0;
+            audioSource.Play();
             if (active1)
             {
                 targetObject.SetActive(true);
