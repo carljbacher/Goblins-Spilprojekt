@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class SpillerBevægelse : MonoBehaviour
 {
-    private Rigidbody2D body;
-    [SerializeField] private float Speed;
-    [SerializeField] private float jumpPower;
-    private BoxCollider2D boxCollider;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private LayerMask wallLayer;
-    private float horizontalInput;
-    [SerializeField] private float coyoteTime;
-    private float coyoteCounter;
-    [SerializeField] private float wallJumpX;
-    [SerializeField] private float wallJumpY;
-    private bool wallJumpCounter;
+    private Rigidbody2D body; // ???
+    [SerializeField] private float Speed; // Styre spillerens movenmentspeed
+    [SerializeField] private float jumpPower; // Styre spillerens jumphight
+    private BoxCollider2D boxCollider; // ???
+    [SerializeField] private LayerMask groundLayer; // Til at spillet ved hvad der er ground
+    [SerializeField] private LayerMask wallLayer; // Til at spillet ved hvad der er wall
+    private float horizontalInput; // Gør så spilleren kan gå til siden
+    [SerializeField] private float coyoteTime; // Så man kan hoppe kort tid efter man er kommet af en platform
+    private float coyoteCounter; // Hængder sammen med den ovenover
+    [SerializeField] private float wallJumpX; // Regulere hvor meget man bevæger sig på x-aksen når man walljumper
+    [SerializeField] private float wallJumpY; // Regulere hvor meget man bevæger sig på y-aksen når man walljumper
+    private bool wallJumpCounter; // Gør så man ikke kan lave 2 walljumps i træk
 
-    private void Awake()
+    private void Awake() // Koden henter ting fra unity
     {
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -23,14 +23,14 @@ public class SpillerBevægelse : MonoBehaviour
 
     private void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-
+        horizontalInput = Input.GetAxis("Horizontal"); // Spillet finder ud af om spilleren kigger mod højre eller venstre
         if (horizontalInput > 0.01f)
             transform.localScale = new Vector3(0.25f, 0.25f, 1);
         else if (horizontalInput < -0.01f)
             transform.localScale = new Vector3(-0.25f, 0.25f, 1);
 
-        if (isGrounded())
+
+        if (isGrounded() && !onWall()) // Genstarter spillerens walljump
             wallJumpCounter = true;
 
         //Jump funktion
