@@ -1525,6 +1525,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.52, y: 12.59}
   m_EdgeRadius: 0
+--- !u!1 &759986676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5081837115410384465, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
+  m_PrefabInstance: {fileID: 859119204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &811912953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,6 +1665,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 38653734}
     m_Modifications:
+    - target: {fileID: 1964902357289363512, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
+      propertyPath: ChangeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964902357289363512, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 759986676}
     - target: {fileID: 6172307715702966550, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.21
@@ -1799,6 +1812,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &933771451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5081837115410384465, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
+  m_PrefabInstance: {fileID: 1849733582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &958718982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2773,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 38653734}
     m_Modifications:
+    - target: {fileID: 1964902357289363512, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
+      propertyPath: ChangeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964902357289363512, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 1204788770}
     - target: {fileID: 6172307715702966550, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.98
@@ -3488,6 +3514,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1466668258}
     m_Modifications:
+    - target: {fileID: 1964902357289363512, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
+      propertyPath: ChangeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964902357289363512, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 933771451}
     - target: {fileID: 6172307715702966550, guid: a51ba5d0018fe964297a3d7c349b747d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.1047325

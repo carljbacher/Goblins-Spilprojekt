@@ -27,11 +27,11 @@ public class MetronomBoxLogic : MonoBehaviour
     {
         Timer1 = Timer1 + Time.deltaTime;
 
-        if (Timer1 > ChangeTime / 4 && Lydtest1)
-        {
-            LilleSlag.Play();
-            Lydtest1 = false;
-        }
+        //if (Timer1 > ChangeTime / 4 && Lydtest1)
+        //{
+        //    LilleSlag.Play();
+        //    Lydtest1 = false;
+        //}
 
         if (Timer1 > ChangeTime / 2 && Lydtest2)
         {
@@ -39,11 +39,11 @@ public class MetronomBoxLogic : MonoBehaviour
             Lydtest2 = false;
         }
 
-        if (Timer1 > 3 * ChangeTime / 4 && Lydtest3)
-        {
-            LilleSlag.Play();
-            Lydtest3 = false;
-        }
+        //if (Timer1 > 3 * ChangeTime / 4 && Lydtest3)
+        //{
+        //    LilleSlag.Play();
+        //    Lydtest3 = false;
+        //}
 
         if (Timer1 > ChangeTime)
         {
