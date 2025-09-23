@@ -14,6 +14,8 @@ public class SpillerBevægelse : MonoBehaviour
     [SerializeField] private float wallJumpX; // Regulere hvor meget man bevæger sig på x-aksen når man walljumper
     [SerializeField] private float wallJumpY; // Regulere hvor meget man bevæger sig på y-aksen når man walljumper
     private bool wallJumpCounter; // Gør så man ikke kan lave 2 walljumps i træk
+    public GameOverScreen GameOverScreen;
+    private bool GameOver;
 
     private void Awake() // Koden henter ting fra unity
     {
@@ -23,6 +25,12 @@ public class SpillerBevægelse : MonoBehaviour
 
     private void Update()
     {
+        if (GameOver) {
+            GameOverScreen.Setup();            
+        }
+
+
+
         horizontalInput = Input.GetAxis("Horizontal"); // Spillet finder ud af om spilleren kigger mod højre eller venstre
         if (horizontalInput > 0.01f)
             transform.localScale = new Vector3(0.25f, 0.25f, 1);

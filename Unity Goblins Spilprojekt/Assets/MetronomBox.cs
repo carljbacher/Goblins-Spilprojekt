@@ -11,9 +11,9 @@ public class MetronomBoxLogic : MonoBehaviour
     private bool active1;
     public AudioSource StortSlag;
     public AudioSource LilleSlag;
-    private bool Lydtest1;
+    //private bool Lydtest1;
     private bool Lydtest2;
-    private bool Lydtest3;
+    //private bool Lydtest3;
 
     void Start()
     {
@@ -53,17 +53,17 @@ public class MetronomBoxLogic : MonoBehaviour
             {
                 targetObject.SetActive(true);
                 active1 = false;
-                Lydtest1 = true;
+                //Lydtest1 = true;
                 Lydtest2 = true;
-                Lydtest3 = true;
+                //Lydtest3 = true;
             }
             else
             {
                 targetObject.SetActive(false);
                 active1 = true;
-                Lydtest1 = true;
+                //Lydtest1 = true;
                 Lydtest2 = true;
-                Lydtest3 = true;
+                //Lydtest3 = true;
             }
         }
         
