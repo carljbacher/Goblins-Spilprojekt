@@ -24,7 +24,7 @@ public class SpillerBevægelse : MonoBehaviour
     private void Update()
     {
         outOfBounds();
-        
+
         if (GameOver)
         {
             GameOverScreen.Setup();
@@ -61,7 +61,7 @@ public class SpillerBevægelse : MonoBehaviour
             if (body.linearVelocity.y < -2f) // maks faldhastighed når man glider
             {
                 body.linearVelocity = new Vector2(body.linearVelocity.x, -2f);
-            }            
+            }
         }
         else
         {
@@ -117,7 +117,11 @@ public class SpillerBevægelse : MonoBehaviour
     private bool onWallSide()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, groundLayer);
-        return raycastHit.collider != null;    
+        return raycastHit.collider != null;
     }
-    
+
+    public void resetPlayer()
+    {
+        body.linearVelocity = new Vector2(0, 0);
+    }
 }

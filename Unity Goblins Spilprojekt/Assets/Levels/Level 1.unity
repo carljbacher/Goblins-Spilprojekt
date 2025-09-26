@@ -10250,6 +10250,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c0e74d50292b54d8fd0f94c64164a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  playerbody: {fileID: 1405968450}
+  chekpointpoint: 95
+  targetObject: {fileID: 1390074887}
+  "SpillerBev\xE6gelse": {fileID: 1405968453}
 --- !u!114 &1390074890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10559,6 +10563,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90710bc3627821745bbaf0076bb59cc2, type: 3}
+--- !u!1 &1405968450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8807884198710499978, guid: 90710bc3627821745bbaf0076bb59cc2, type: 3}
+  m_PrefabInstance: {fileID: 1405968449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1405968453 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6933927823786927999, guid: 90710bc3627821745bbaf0076bb59cc2, type: 3}
+  m_PrefabInstance: {fileID: 1405968449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405968450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fec82b9ebc4d146a9311b9d1ab53b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!4 &1419480402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6926223328191044333, guid: 14c0797090a32a54690306c1589a5dde, type: 3}
