@@ -26,6 +26,7 @@ public class SpillerBevægelse : MonoBehaviour
     private void Update()
     {
         outOfBounds();
+        
         if (GameOver)
         {
             GameOverScreen.Setup();
@@ -51,24 +52,31 @@ public class SpillerBevægelse : MonoBehaviour
             body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y / 2);
 
         if (onWall() && !isGrounded())
+        {
+            if (body.linearVelocity.y < -2f) // maks faldhastighed når man glider
             {
-                if (body.linearVelocity.y < -2f) // maks faldhastighed når man glider
-                    body.linearVelocity = new Vector2(body.linearVelocity.x, -2f);
-
-            body.gravityScale = 1; // lavere tyngdekraft på væg
+                body.linearVelocity = new Vector2(body.linearVelocity.x, -2f);
             }
+        }
+        else if (onWallSide() && !isGrounded())
+        {
+            if (body.linearVelocity.y < -2f) // maks faldhastighed når man glider
+            {
+                body.linearVelocity = new Vector2(body.linearVelocity.x, -2f);
+                Debug.Log("Wallslide test");
+            }            
+        }
         else
-            {
-                body.gravityScale = 4;
-                body.linearVelocity = new Vector2(horizontalInput * Speed, body.linearVelocity.y);
+        {
+            body.linearVelocity = new Vector2(horizontalInput * Speed, body.linearVelocity.y);
 
-                if (isGrounded())
-                {
-                    coyoteCounter = coyoteTime;
-                }
-                else
-                    coyoteCounter -= Time.deltaTime;
+            if (isGrounded())
+            {
+                coyoteCounter = coyoteTime;
             }
+            else
+                coyoteCounter -= Time.deltaTime;
+        }
 
     }
 
@@ -78,15 +86,25 @@ public class SpillerBevægelse : MonoBehaviour
         if (coyoteCounter < 0 && !onWall()) return;
 
         if (onWall() && wallJumpCounter)
+        {
             wallJump();
+            Debug.Log("Walljump test");
+        }
         else
         {
             if (isGrounded())
+            {
                 body.linearVelocity = new Vector2(body.linearVelocity.x, jumpPower);
+                Debug.Log("Normal jump test");
+            }
             else
             {
                 if (coyoteCounter > 0)
+                {
                     body.linearVelocity = new Vector2(body.linearVelocity.x, jumpPower);
+                    Debug.Log("Coyote test");
+                }
+
             }
             coyoteCounter = 0;
         }
@@ -116,4 +134,11 @@ public class SpillerBevægelse : MonoBehaviour
         if (body.transform.position.y < -10)
             GameOver = true;
     }
+
+    private bool onWallSide()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, groundLayer);
+        return raycastHit.collider != null;    
+    }
+    
 }
