@@ -4488,8 +4488,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   coyoteTime: 0.1
-  wallJumpX: 1700
-  wallJumpY: 1300
+  wallJumpX: 25
+  wallJumpY: 18
   GameOverScreen: {fileID: 1390074889}
 --- !u!1 &1331098070
 GameObject:

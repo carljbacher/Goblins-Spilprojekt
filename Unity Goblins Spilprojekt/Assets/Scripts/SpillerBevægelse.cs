@@ -25,8 +25,10 @@ public class SpillerBevægelse : MonoBehaviour
 
     private void Update()
     {
-        if (GameOver) {
-            GameOverScreen.Setup();            
+        outOfBounds();
+        if (GameOver)
+        {
+            GameOverScreen.Setup();
         }
 
 
@@ -38,33 +40,36 @@ public class SpillerBevægelse : MonoBehaviour
             transform.localScale = new Vector3(-0.25f, 0.25f, 1);
 
 
-        if (isGrounded() && !onWall()) // Genstarter spillerens walljump
+        if (isGrounded()) // Genstarter spillerens walljump
             wallJumpCounter = true;
 
         //Jump funktion
-            if (Input.GetKeyDown(KeyCode.Space))
-                Jump();
+        if (Input.GetKeyDown(KeyCode.Space))
+            Jump();
 
         if (Input.GetKeyUp(KeyCode.Space) && body.linearVelocity.y > 0)
             body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y / 2);
 
-        if (onWall())
-        {
-            body.gravityScale = 0;
-            body.linearVelocity = Vector2.zero;
-        }
-        else
-        {
-            body.gravityScale = 4;
-            body.linearVelocity = new Vector2(horizontalInput * Speed, body.linearVelocity.y);
-
-            if (isGrounded())
+        if (onWall() && !isGrounded())
             {
-                coyoteCounter = coyoteTime;
+                if (body.linearVelocity.y < -2f) // maks faldhastighed når man glider
+                    body.linearVelocity = new Vector2(body.linearVelocity.x, -2f);
+
+            body.gravityScale = 1; // lavere tyngdekraft på væg
             }
-            else
-                coyoteCounter -= Time.deltaTime;
-        }
+        else
+            {
+                body.gravityScale = 4;
+                body.linearVelocity = new Vector2(horizontalInput * Speed, body.linearVelocity.y);
+
+                if (isGrounded())
+                {
+                    coyoteCounter = coyoteTime;
+                }
+                else
+                    coyoteCounter -= Time.deltaTime;
+            }
+
     }
 
 
@@ -89,9 +94,10 @@ public class SpillerBevægelse : MonoBehaviour
 
     private void wallJump()
     {
-        body.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
+        body.linearVelocity = new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY);
         wallJumpCounter = false;
     }
+
 
     private bool isGrounded()
     {
@@ -103,5 +109,11 @@ public class SpillerBevægelse : MonoBehaviour
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
         return raycastHit.collider != null;
+    }
+
+    private void outOfBounds()
+    {
+        if (body.transform.position.y < -10)
+            GameOver = true;
     }
 }
