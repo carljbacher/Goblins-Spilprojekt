@@ -9,8 +9,6 @@ public class SpillerBevægelse : MonoBehaviour
     [SerializeField] private LayerMask groundLayer; // Til at spillet ved hvad der er ground
     [SerializeField] private LayerMask wallLayer; // Til at spillet ved hvad der er wall
     private float horizontalInput; // Gør så spilleren kan gå til siden
-    [SerializeField] private float coyoteTime; // Så man kan hoppe kort tid efter man er kommet af en platform
-    private float coyoteCounter; // Hængder sammen med den ovenover
     [SerializeField] private float wallJumpX; // Regulere hvor meget man bevæger sig på x-aksen når man walljumper
     [SerializeField] private float wallJumpY; // Regulere hvor meget man bevæger sig på y-aksen når man walljumper
     private bool wallJumpCounter; // Gør så man ikke kan lave 2 walljumps i træk
@@ -63,19 +61,11 @@ public class SpillerBevægelse : MonoBehaviour
             if (body.linearVelocity.y < -2f) // maks faldhastighed når man glider
             {
                 body.linearVelocity = new Vector2(body.linearVelocity.x, -2f);
-                Debug.Log("Wallslide test");
             }            
         }
         else
         {
             body.linearVelocity = new Vector2(horizontalInput * Speed, body.linearVelocity.y);
-
-            if (isGrounded())
-            {
-                coyoteCounter = coyoteTime;
-            }
-            else
-                coyoteCounter -= Time.deltaTime;
         }
 
     }
@@ -83,12 +73,11 @@ public class SpillerBevægelse : MonoBehaviour
 
     private void Jump()
     {
-        if (coyoteCounter < 0 && !onWall()) return;
+        if (!onWall() && !isGrounded()) return;
 
         if (onWall() && wallJumpCounter)
         {
             wallJump();
-            Debug.Log("Walljump test");
         }
         else
         {
@@ -97,16 +86,6 @@ public class SpillerBevægelse : MonoBehaviour
                 body.linearVelocity = new Vector2(body.linearVelocity.x, jumpPower);
                 Debug.Log("Normal jump test");
             }
-            else
-            {
-                if (coyoteCounter > 0)
-                {
-                    body.linearVelocity = new Vector2(body.linearVelocity.x, jumpPower);
-                    Debug.Log("Coyote test");
-                }
-
-            }
-            coyoteCounter = 0;
         }
     }
 
