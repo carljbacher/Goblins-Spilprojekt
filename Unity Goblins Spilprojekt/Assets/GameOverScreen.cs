@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
 
 public class GameOverScreen : MonoBehaviour
 {
+    private Rigidbody2D playerbody;
     public void Setup()
     {
         gameObject.SetActive(true);
@@ -11,6 +13,8 @@ public class GameOverScreen : MonoBehaviour
 
     public void RestartButton()
     {
-        SceneManager.LoadScene("Level 1");
+        if (playerbody.transform.position.x < 50)
+            SceneManager.LoadScene("Level 1");
+
     }
 }
