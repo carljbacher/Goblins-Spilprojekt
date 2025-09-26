@@ -7816,6 +7816,10 @@ PrefabInstance:
       propertyPath: wallJumpY
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 6933927823786927999, guid: 90710bc3627821745bbaf0076bb59cc2, type: 3}
+      propertyPath: GameOverScreen
+      value: 
+      objectReference: {fileID: 1390074889}
     - target: {fileID: 8807884198710499978, guid: 90710bc3627821745bbaf0076bb59cc2, type: 3}
       propertyPath: m_Name
       value: Player prefab 1
