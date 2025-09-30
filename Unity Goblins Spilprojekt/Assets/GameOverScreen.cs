@@ -26,7 +26,7 @@ public class GameOverScreen : MonoBehaviour
             Debug.Log("Restart test 2");
             SpillerBevægelse.resetPlayer();
 
-            playerbody.transform.position = new Vector3(100, 6, 0);
+            playerbody.transform.position = new Vector3(97, 6, 0);
 
             
         }
